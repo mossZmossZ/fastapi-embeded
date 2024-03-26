@@ -1,4 +1,4 @@
 fastapi[all]
 pydantic
 DateTime
-request
+requests
