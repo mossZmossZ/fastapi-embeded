@@ -1,1 +1,5 @@
 fastapi[all]
+pydantic
+sqlite3
+dateime
+request
