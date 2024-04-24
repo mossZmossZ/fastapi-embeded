@@ -42,7 +42,11 @@ app.add_middleware(
 
 
 
-
+@app.on_event("startup")
+async def startup_event():
+   port = app.port
+   print("The port used for this app is", port)
+   
 @app.get("/api/")
 async def root():
     return {"message": "Hello World"}
