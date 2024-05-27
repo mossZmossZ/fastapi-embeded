@@ -40,12 +40,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
-@app.on_event("startup")
-async def startup_event():
-   port = app.port
-   print("The port used for this app is", port)
    
 @app.get("/api/")
 async def root():
@@ -269,7 +263,7 @@ class borrow(BaseModel):
     
 LINE_API = "https://notify-api.line.me/api/notify"
 load_dotenv()
-TOKEN = os.getenv("SECRET_KEY")
+TOKEN = os.getenv("SECRET_KEY") 
 
 # Create the endpoint
 @app.post('/api/SEND_Borrow')
